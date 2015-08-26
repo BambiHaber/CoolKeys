@@ -1,7 +1,6 @@
 /**
  * Global.js
  **/
-
 //Namespacing
 var namespace = function (name, separator, container) {
     var ns = name.split(separator || '.'),
