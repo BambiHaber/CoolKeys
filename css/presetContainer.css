@@ -1,0 +1,23 @@
+#presetContainer {
+  font-family: 'Exo', Helvetica, Arial;
+  font-size: 1em;
+  color: #ffdfdd;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background: #2b3737;
+}
+#presetContainer ul {
+  padding: 5px;
+  list-style: none;
+  display: block;
+}
+#presetContainer ul li {
+  cursor: pointer;
+}
+#presetContainer ul li.selected {
+  font-size: 1.2em;
+  font-weight: bold;
+}

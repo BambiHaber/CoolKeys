@@ -1,0 +1,45 @@
+#configurationButtons {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  #panelContainer {
+    height: 20px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid wheat;
+    border-top: none;
+    background: #111111;
+
+    .panelTitle {
+      color: white;
+      width: 100%;
+      text-indent: 1%;
+    }
+
+    #toggleWave {
+      position: relative;
+      width: 30px;
+      height: 15px;
+      border-radius: 4px;
+      background: #d5cea6; /* Old browsers */
+      background: -moz-linear-gradient(-45deg, #d5cea6 0%, #c9c190 40%, #b7ad70 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #d5cea6), color-stop(40%, #c9c190), color-stop(100%, #b7ad70)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(-45deg, #d5cea6 0%, #c9c190 40%, #b7ad70 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(-45deg, #d5cea6 0%, #c9c190 40%, #b7ad70 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(-45deg, #d5cea6 0%, #c9c190 40%, #b7ad70 100%); /* IE10+ */
+      background: linear-gradient(135deg, #d5cea6 0%, #c9c190 40%, #b7ad70 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5cea6', endColorstr='#b7ad70', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+      height: 40px;
+      position: relative;
+      left: 10px;
+      top: 4px;
+      color: #54391F;
+      text-indent: 3px;
+      &.sine {
+      }
+      &.saw {
+      }
+    }
+  }
+}

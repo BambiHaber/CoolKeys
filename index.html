@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ofer Haber's - VKeyboard</title>
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:900' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/lib/global.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/underscore.js"></script>
+    <script type="text/javascript" src="js/lib/backbone.js"></script>
+    <script type="text/javascript" src="js/lib/timbre.js"></script>
+    <script type="text/javascript" src="js/lib/promises.js"></script>
+
+    <script type="text/javascript" src="js/events/Events.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/modules/soundEngine/Controller.js"></script>
+    <script type="text/javascript" src="js/modules/midi/Controller.js"></script>
+    <script type="text/javascript" src="js/modules/network/Controller.js"></script>
+
+    <script type="text/javascript" src="js/models/NoteModel.js"></script>
+
+    <script type="text/javascript" src="js/models/DeviceIoModel.js"></script>
+
+    <script type="text/javascript" src="js/base/ModuleBase.js"></script>
+
+    <script type="text/javascript" src="js/modules/console/Controller.js"></script>
+
+    <script type="text/javascript" src="js/modules/keyboard/Keyboard.js"></script>
+    <script type="text/javascript" src="js/modules/keyboard/KeyboardModel.js"></script>
+    <script type="text/javascript" src="js/modules/keyboard/KeyboardView.js"></script>
+
+    <script type="text/javascript" src="js/modules/keyboard/modules/keys/Key.js"></script>
+    <script type="text/javascript" src="js/modules/keyboard/modules/keys/KeyModel.js"></script>
+    <script type="text/javascript" src="js/modules/keyboard/modules/keys/KeyCollection.js"></script>
+    <script type="text/javascript" src="js/modules/keyboard/modules/keys/KeyView.js"></script>
+
+    <script type="text/javascript" src="js/modules/presets/PresetsView.js"></script>
+
+    <script type="text/javascript" src="js/pages/HomeView.js"></script>
+
+
+    <script type="text/javascript">
+        ($(document).ready(function () {
+            appInstance = new com.oferHaber.coolKeys.app();
+        }));
+    </script>
+</head>
+<body>
+
+<section id="configurationButtons">
+    <div id="panelContainer">
+        <!--
+                <div id="toggleWave" class="sine">&#x276f;&#x276f;</div>
+        -->
+        <div class="panelTitle">Ofer's - vKeyboard</div>
+    </div>
+</section>
+<div id="presetContainer">
+    <ul>
+        <li class="selected" data-instrument="sin">Sine wave</li>
+        <li data-instrument="rhodes">Rhodes (Sampled)</li>
+    </ul>
+</div>
+<div id="piano">
+    <div id="keysContainer">
+        <div id="felt"></div>
+
+    </div>
+</div>
+<div id="console">
+    <div class="consoleTitle">
+        Information console
+    </div>
+    <div class="output">
+        This was build using the following JS libraries:<br/>
+        Backbone, Underscore, Jquery, timbre,
+    </div>
+</div>
+
+<script id="blackKeyTemplate" type="text/template">
+    <div id="<%= guid %>" data-note="<%= note %>" data-frequency="<%= frequency %>" data-octvate="<%= octave %>"
+         data-isSharp="<%= isSharp %>" class="key blackKey"><span class="keyboardChar"><%= keyboardChar %></span></div>
+</script>
+
+<script id="whiteKeyTemplate" type="text/template">
+    <div id="<%= guid %>" data-note="<%= note %>" data-frequency="<%= frequency %>" data-octvate="<%= octave %>"
+         data-isSharp="<%= isSharp %>" class="key whiteKey"><span class="keyboardChar"><%= keyboardChar %></span></div>
+</script>
+
+</body>
+</html>
